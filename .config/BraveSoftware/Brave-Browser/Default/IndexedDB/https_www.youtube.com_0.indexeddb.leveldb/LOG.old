@@ -1,0 +1,21 @@
+2023/10/10-00:07:35.855 65f Reusing MANIFEST /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/10-00:07:35.856 65f Recovering log #236
+2023/10/10-00:07:35.874 65f Reusing old log /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000236.log 
+2023/10/10-00:07:45.089 65f Level-0 table #241: started
+2023/10/10-00:07:45.132 65f Level-0 table #241: 1621878 bytes OK
+2023/10/10-00:07:45.137 65f Delete type=0 #236
+2023/10/10-00:07:51.894 65f Compacting 1@1 + 1@2 files
+2023/10/10-00:07:51.904 65f Generated table #242@1: 533 keys, 62016 bytes
+2023/10/10-00:07:51.904 65f Compacted 1@1 + 1@2 files => 62016 bytes
+2023/10/10-00:07:51.907 65f compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/10/10-00:07:51.907 65f Delete type=2 #241
+2023/10/10-00:07:51.907 65f Delete type=2 #238
+2023/10/10-00:15:44.279 65f Level-0 table #244: started
+2023/10/10-00:15:44.302 65f Level-0 table #244: 1033304 bytes OK
+2023/10/10-00:15:44.306 65f Delete type=0 #240
+2023/10/10-00:20:02.846 65e Compacting 1@1 + 1@2 files
+2023/10/10-00:20:02.859 65e Generated table #245@1: 581 keys, 66123 bytes
+2023/10/10-00:20:02.860 65e Compacted 1@1 + 1@2 files => 66123 bytes
+2023/10/10-00:20:02.864 65e compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/10/10-00:20:02.864 65e Delete type=2 #242
+2023/10/10-00:20:02.864 65e Delete type=2 #244

@@ -1,0 +1,6 @@
+2023/10/05-13:01:36.538 182b Creating DB /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.ifood.com.br_0.indexeddb.leveldb since it was missing.
+2023/10/05-13:01:36.543 182b Reusing MANIFEST /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.ifood.com.br_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/05-13:02:01.874 182c Level-0 table #5: started
+2023/10/05-13:02:01.877 182c Level-0 table #5: 47688 bytes OK
+2023/10/05-13:02:01.879 182c Delete type=0 #3
+2023/10/05-13:02:01.880 182c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,17 @@
+2023/10/10-00:07:25.156 65e Reusing MANIFEST /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/10-00:07:25.156 65e Recovering log #38
+2023/10/10-00:07:25.156 65e Reusing old log /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_www.notion.so_0.indexeddb.leveldb/000038.log 
+2023/10/10-00:08:11.188 66c Level-0 table #43: started
+2023/10/10-00:08:11.193 66c Level-0 table #43: 534 bytes OK
+2023/10/10-00:08:11.199 66c Delete type=0 #38
+2023/10/10-00:08:11.199 65e Manual compaction at level-0 from '\x00\x0b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0c\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/10/10-00:08:11.555 66a Level-0 table #45: started
+2023/10/10-00:08:11.558 66a Level-0 table #45: 524 bytes OK
+2023/10/10-00:08:11.561 66a Delete type=0 #42
+2023/10/10-00:08:11.561 65e Manual compaction at level-0 from '\x00\x0c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0d\x00\x00\x00' @ 0 : 0; will stop at '\x00\x0c\x00\x00\x05' @ 148412 : 1
+2023/10/10-00:08:11.561 65e Compacting 1@0 + 1@1 files
+2023/10/10-00:08:11.564 65e Generated table #46@0: 13 keys, 515 bytes
+2023/10/10-00:08:11.564 65e Compacted 1@0 + 1@1 files => 515 bytes
+2023/10/10-00:08:11.566 65e compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/10/10-00:08:11.567 65e Delete type=2 #45
+2023/10/10-00:08:11.567 65e Manual compaction at level-0 from '\x00\x0c\x00\x00\x05' @ 148412 : 1 .. '\x00\x0d\x00\x00\x00' @ 0 : 0; will stop at (end)

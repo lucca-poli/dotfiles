@@ -1,0 +1,6 @@
+2023/10/06-15:56:03.883 2520 Creating DB /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_relogioonline.com.br_0.indexeddb.leveldb since it was missing.
+2023/10/06-15:56:03.889 2520 Reusing MANIFEST /home/luiz/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_relogioonline.com.br_0.indexeddb.leveldb/MANIFEST-000001
+2023/10/06-16:00:34.993 2521 Level-0 table #5: started
+2023/10/06-16:00:34.995 2521 Level-0 table #5: 821 bytes OK
+2023/10/06-16:00:34.997 2521 Delete type=0 #3
+2023/10/06-16:00:34.997 2521 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
