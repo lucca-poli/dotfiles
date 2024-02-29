@@ -15,4 +15,6 @@ compinit
 # ENV variable
 export EDITOR=nvim
 
+source ~/.config/lf/lf.bash
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"

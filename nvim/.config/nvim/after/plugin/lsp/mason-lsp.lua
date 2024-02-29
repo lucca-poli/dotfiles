@@ -60,4 +60,7 @@ nvim_lsp.gopls.setup {
 nvim_lsp.bashls.setup {
     on_attach = on_attach
 }
+nvim_lsp.nil_ls.setup {
+    on_attach = on_attach
+}
 

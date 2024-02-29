@@ -1,3 +1,3 @@
-2024/02/19-18:27:41.899 51211 Reusing MANIFEST /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/19-18:27:41.900 51211 Recovering log #3
-2024/02/19-18:27:41.913 51211 Reusing old log /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000003.log 
+2024/02/28-21:03:20.882 29b8c Reusing MANIFEST /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/28-21:03:20.882 29b8c Recovering log #3
+2024/02/28-21:03:20.892 29b8c Reusing old log /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000003.log 
