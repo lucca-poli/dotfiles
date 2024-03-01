@@ -11,15 +11,22 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     packages = [
-      # Terminal
-      pkgs.imagemagick
+      # utils
+      pkgs-unstable.obsidian
+      pkgs.parallel
       pkgs.kitty
       pkgs.starship
       pkgs.pass
       pkgs.htop-vim
       pkgs.stow
       pkgs.jq # A lightweight and flexible command-line JSON processor
-        
+      pkgs.imagemagick
+
+      # Development
+      pkgs.go
+      pkgs.rustup
+      pkgs.nodejs_21
+      
       # lf
       pkgs.lf
       pkgs.zip
@@ -28,26 +35,38 @@
       pkgs.fontpreview
       pkgs.pistol
 
-      # utils
-      pkgs-unstable.obsidian
-
       # Hyprland
       pkgs.grim
       pkgs.qalculate-gtk
+      pkgs.swww
+      pkgs.cliphist
+      pkgs.swappy
       pkgs.slurp
       pkgs.firefox
       pkgs.feh
       pkgs.waybar
       pkgs.hyprpaper
+      pkgs.hyprpicker
       pkgs.wlogout
+      pkgs.swaylock-effects
       pkgs.dconf
+      pkgs.nwg-look
+      pkgs.libsForQt5.ffmpegthumbs
       pkgs.libsForQt5.dolphin
-      pkgs.wofi
-
-      # Development
-      pkgs.go
-      pkgs.rustup
-      pkgs.nodejs_21
+      pkgs.libsForQt5.ark
+      pkgs.libsForQt5.qtstyleplugin-kvantum
+      pkgs.libsForQt5.qt5ct
+      pkgs.libsForQt5.qt5.qtimageformats
+      pkgs.libsForQt5.qt5.qtgraphicaleffects
+      pkgs.libsForQt5.qt5.qtquickcontrols
+      pkgs.libsForQt5.qt5.qtquickcontrols2
+      pkgs.libsForQt5.qt5.qtwayland
+      pkgs.libsForQt5.sddm
+      pkgs.qt6.qtwayland
+      pkgs.qt6Packages.qt6ct
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.rofi-wayland
+      pkgs.dunst
     ];
   };
 

@@ -81,12 +81,7 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config = {
-    allowUnfree = true;
-    # permittedInsecurePackages = [
-    #   "electron-25.9.0" # Temporary, to make obsidian work
-    # ];
-  };
+  nixpkgs.config.allowUnfree = true;
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -113,6 +108,8 @@
     neofetch
     pciutils # lspci
     usbutils # lsusb
+    bluez # Bluetooth
+    blueman
 
     # Secrets
     gnupg
