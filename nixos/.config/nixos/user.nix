@@ -13,6 +13,7 @@
     packages = [
       # utils
       pkgs-unstable.obsidian
+      pkgs.spotify
       pkgs.parallel
       pkgs.kitty
       pkgs.starship
@@ -21,6 +22,7 @@
       pkgs.stow
       pkgs.jq # A lightweight and flexible command-line JSON processor
       pkgs.imagemagick
+      pkgs.libnotify
 
       # Development
       pkgs.go
@@ -36,25 +38,32 @@
       pkgs.pistol
 
       # Hyprland
+      pkgs.catppuccin-gtk
+      pkgs.grimblast
       pkgs.grim
       pkgs.qalculate-gtk
       pkgs.swww
+      pkgs.mpd
       pkgs.cliphist
       pkgs.swappy
       pkgs.slurp
+      pkgs.cava
       pkgs.firefox
       pkgs.feh
       pkgs.waybar
-      pkgs.hyprpaper
       pkgs.hyprpicker
+      pkgs.dbus
       pkgs.wlogout
+      pkgs.envsubst
       pkgs.swaylock-effects
       pkgs.dconf
+      pkgs.spicetify-cli
       pkgs.nwg-look
+      pkgs.glib
+      pkgs.libsForQt5.polkit-kde-agent
       pkgs.libsForQt5.ffmpegthumbs
       pkgs.libsForQt5.dolphin
       pkgs.libsForQt5.ark
-      pkgs.libsForQt5.qtstyleplugin-kvantum
       pkgs.libsForQt5.qt5ct
       pkgs.libsForQt5.qt5.qtimageformats
       pkgs.libsForQt5.qt5.qtgraphicaleffects
@@ -62,12 +71,22 @@
       pkgs.libsForQt5.qt5.qtquickcontrols2
       pkgs.libsForQt5.qt5.qtwayland
       pkgs.libsForQt5.sddm
+      pkgs.libsForQt5.konsole
       pkgs.qt6.qtwayland
       pkgs.qt6Packages.qt6ct
-      pkgs.xdg-desktop-portal-hyprland
       pkgs.rofi-wayland
       pkgs.dunst
     ];
+  };
+
+  security.pam.services.swaylock = {};
+
+  services.dbus.enable = true;
+  xdg.portal = { 
+    enable = true; 
+    extraPortals = [ 
+      pkgs.xdg-desktop-portal-hyprland
+    ]; 
   };
 
   programs.hyprland = {

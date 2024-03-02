@@ -100,14 +100,20 @@
     wget
     file
     which
+    fprintd # fingerprint
 
     # System tools
     gcc
+    killall
     pulseaudio
+    pamixer
+    playerctl
+    libsForQt5.qtstyleplugin-kvantum
     sof-firmware
     neofetch
     pciutils # lspci
     usbutils # lsusb
+    brightnessctl
     bluez # Bluetooth
     blueman
 
@@ -127,6 +133,13 @@
   };
 
   # List services that you want to enable:
+  services.fprintd = {
+    enable = true;
+    tod = {
+      enable = true;
+      driver = pkgs.libfprint-2-tod1-vfs0090;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

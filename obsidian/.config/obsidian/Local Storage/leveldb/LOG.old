@@ -1,3 +1,3 @@
-2024/03/01-10:53:40.136 464bb Reusing MANIFEST /home/lucca/.config/obsidian/Local Storage/leveldb/MANIFEST-000001
-2024/03/01-10:53:40.137 464bb Recovering log #3
-2024/03/01-10:53:40.138 464bb Reusing old log /home/lucca/.config/obsidian/Local Storage/leveldb/000003.log 
+2024/03/01-19:04:02.725 5785f Reusing MANIFEST /home/lucca/.config/obsidian/Local Storage/leveldb/MANIFEST-000001
+2024/03/01-19:04:02.734 5785f Recovering log #3
+2024/03/01-19:04:02.734 5785f Reusing old log /home/lucca/.config/obsidian/Local Storage/leveldb/000003.log 
