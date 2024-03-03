@@ -132,3 +132,6 @@ ln -s /usr/share/themes/$ThemeSet/gtk-4.0 $ConfDir/gtk-4.0
 ln -fs $ConfDir/hypr/themes/${ThemeSet}.conf $ConfDir/hypr/themes/theme.conf
 hyprctl reload
 
+# wallbash
+# "${ScrDir}/swwwallbash.sh" "$getWall"
+

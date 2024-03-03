@@ -301,7 +301,7 @@
     },
 
     "custom/cliphist": {
-        "format": "",
+        "format": " {}",
         "rotate": 0,
         "exec": "echo ; echo 󰅇 clipboard history",
         "on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c",

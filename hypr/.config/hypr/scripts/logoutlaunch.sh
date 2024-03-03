@@ -39,21 +39,15 @@ esac
 # scale font size
 export fntSize=$(( y_mon * 2 / 100 ))
 
-# detect system theme
-whiteThemes=("Catppuccin-Latte" "Material-Sakura" "Frosted-Glass")
-while IFS='|' read -r isActive ThemeSet _; do
-    # Process each line (replace this with your own logic)
-    if [ "$isActive" -eq 1 ]; then
-        export wbarTheme="${ThemeSet}"
-        if [[ " ${whiteThemes[@]} " =~ " ${ThemeSet} " ]]; then
-            export BtnCol="white"
-            export WindBg="rgba(0,0,0,0.5)"
-        else
-            export BtnCol="black"
-            export WindBg="rgba(255,255,255,0.5)"
-        fi
-    fi
-done < "$ThemeCtl"
+# Export themes
+export wbarTheme="${gtkTheme}"
+if [[ "${gtkTheme}" = "white" ]]; then
+    export BtnCol="white"
+    export WindBg="rgba(0,0,0,0.5)"
+else
+    export BtnCol="black"
+    export WindBg="rgba(255,255,255,0.5)"
+fi
 
 # eval hypr border radius
 export active_rad=$(( hypr_border * 5 ))

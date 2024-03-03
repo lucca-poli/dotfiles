@@ -74,6 +74,7 @@
       pkgs.qt6Packages.qt6ct
       pkgs.rofi-wayland
       pkgs.dunst
+      pkgs.upower
     ];
   };
 
