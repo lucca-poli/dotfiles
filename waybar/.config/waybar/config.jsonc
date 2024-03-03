@@ -110,7 +110,7 @@
     "clock": {
         "format": "{:%I:%M %p}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
+        "format-alt": "{:%R 󰃭 %d/%m/%y}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -301,7 +301,7 @@
     },
 
     "custom/cliphist": {
-        "format": "{}",
+        "format": "",
         "rotate": 0,
         "exec": "echo ; echo 󰅇 clipboard history",
         "on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c",

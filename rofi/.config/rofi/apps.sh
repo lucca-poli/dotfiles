@@ -1,0 +1,2 @@
+echo "  obsidian"
+echo "  spotify"

@@ -20,9 +20,6 @@
       pkgs.pass
       pkgs.htop-vim
       pkgs.stow
-      pkgs.jq # A lightweight and flexible command-line JSON processor
-      pkgs.imagemagick
-      pkgs.libnotify
 
       # Development
       pkgs.go
@@ -38,6 +35,9 @@
       pkgs.pistol
 
       # Hyprland
+      pkgs.jq # A lightweight and flexible command-line JSON processor
+      pkgs.imagemagick
+      pkgs.libnotify
       pkgs.parallel
       pkgs.grimblast
       pkgs.grim
@@ -57,9 +57,7 @@
       pkgs.envsubst
       pkgs.swaylock-effects
       pkgs.dconf
-      pkgs.spicetify-cli
       pkgs.nwg-look
-      pkgs.glib
       pkgs.libsForQt5.polkit-kde-agent
       pkgs.libsForQt5.ffmpegthumbs
       pkgs.libsForQt5.dolphin
@@ -82,19 +80,13 @@
   # Fingerprint on swaylock
   security.pam.services.swaylock = {};
 
-  # Make Eletron and Chromium based apps work
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   services.dbus.enable = true;
   xdg.portal = { 
     enable = true; 
-    wlr.enable = true;
     extraPortals = [ 
       pkgs.xdg-desktop-portal-hyprland
-      pkgs.pkgs.xdg-desktop-portal-gtk
     ]; 
   };
-  services.gnome.gnome-keyring.enable = true;
 
   programs.hyprland = {
     enable = true;

@@ -26,20 +26,23 @@ wind_border=$(( hypr_border * 3 ))
 elem_border=`[ $hypr_border -eq 0 ] && echo "10" || echo $(( hypr_border * 2 ))`
 r_override="window {border: ${hypr_width}px; border-radius: ${wind_border}px;} element {border-radius: ${elem_border}px;}"
 
-
-# read hypr font size
-
-fnt_override=`gsettings get org.gnome.desktop.interface font-name | awk '{gsub(/'\''/,""); print $NF}'`
-fnt_override="configuration {font: \"JetBrainsMono Nerd Font ${fnt_override}\";}"
-
-
-# read hypr theme icon
-
-icon_override=`gsettings get org.gnome.desktop.interface icon-theme | sed "s/'//g"`
-icon_override="configuration {icon-theme: \"${icon_override}\";}"
-
-
 # launch rofi
 
-rofi -show $r_mode -theme-str "${fnt_override}" -theme-str "${r_override}" -theme-str "${icon_override}" -config "${roconf}"
+if [ "$r_mode" = "drun" ]; then
+    app=`$ConfDir/rofi/apps.sh | rofi -dmenu -theme-str "${r_override}" -config "${roconf}" | awk '{print $2}'`
+
+    case $app in
+        obsidian)
+            obsidian -enable-features=UseOzonePlatform -ozone-platform=wayland --ozone-platform-hint=auto
+            ;;
+        spotify)
+            spotify -enable-features=UseOzonePlatform -ozone-platform=wayland --ozone-platform-hint=auto
+            ;;
+        *)
+            echo "App not found"
+            ;;
+        esac
+else
+    rofi -show $r_mode -theme-str "${r_override}" -config "${roconf}"
+fi
 

@@ -78,6 +78,10 @@
     interactiveShellInit = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
     '';
+
+    shellAliases = {
+      update = "sudo nixos-rebuild switch --flake '/home/lucca/.dotfiles/nixos/.config/nixos#nixos'";
+    };
   };
 
   # Allow unfree packages
@@ -121,7 +125,11 @@
     gnupg
   ];
 
-  environment.variables.EDITOR = "nvim";
+  environment = {
+      variables.EDITOR = "nvim";
+      # Make Eletron and Chromium based apps work
+      sessionVariables.NIXOS_OZONE_WL = "1";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
