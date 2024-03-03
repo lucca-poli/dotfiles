@@ -1,5 +1,6 @@
 { 
   config, 
+  lib,
   pkgs,
   pkgs-unstable,
   ... 
@@ -38,7 +39,6 @@
       pkgs.pistol
 
       # Hyprland
-      pkgs.catppuccin-gtk
       pkgs.grimblast
       pkgs.grim
       pkgs.qalculate-gtk
@@ -84,10 +84,13 @@
   services.dbus.enable = true;
   xdg.portal = { 
     enable = true; 
+    wlr.enable = true;
     extraPortals = [ 
       pkgs.xdg-desktop-portal-hyprland
+      pkgs.pkgs.xdg-desktop-portal-gtk
     ]; 
   };
+  services.gnome.gnome-keyring.enable = true;
 
   programs.hyprland = {
     enable = true;
