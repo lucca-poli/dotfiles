@@ -15,7 +15,6 @@
       # utils
       pkgs-unstable.obsidian
       pkgs.spotify
-      pkgs.parallel
       pkgs.kitty
       pkgs.starship
       pkgs.pass
@@ -39,6 +38,7 @@
       pkgs.pistol
 
       # Hyprland
+      pkgs.parallel
       pkgs.grimblast
       pkgs.grim
       pkgs.qalculate-gtk
@@ -79,7 +79,11 @@
     ];
   };
 
+  # Fingerprint on swaylock
   security.pam.services.swaylock = {};
+
+  # Make Eletron and Chromium based apps work
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   services.dbus.enable = true;
   xdg.portal = { 
