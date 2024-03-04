@@ -40,7 +40,6 @@
       pkgs.libnotify
       pkgs.parallel
       pkgs.grimblast
-      pkgs.grim
       pkgs.qalculate-gtk
       pkgs.swww
       pkgs.mpd

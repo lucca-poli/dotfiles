@@ -413,3 +413,11 @@
 2024-03-03 18:05:56 Failed to check for update using Github (net::ERR_INTERNET_DISCONNECTED)
 2024-03-03 18:05:56 Checking for update using obsidian.md
 2024-03-03 18:05:56 Failed to check for update using obsidian.md (net::ERR_INTERNET_DISCONNECTED)
+2024-03-04 12:49:21 Checking for update using Github
+2024-03-04 12:49:21 Failed to check for update using Github (net::ERR_INTERNET_DISCONNECTED)
+2024-03-04 12:49:21 Checking for update using obsidian.md
+2024-03-04 12:49:21 Failed to check for update using obsidian.md (net::ERR_INTERNET_DISCONNECTED)
+2024-03-04 13:55:55 Checking for update using Github
+2024-03-04 13:55:55 Success.
+2024-03-04 13:55:55 Latest version is 1.5.8
+2024-03-04 13:55:55 App is up to date.
