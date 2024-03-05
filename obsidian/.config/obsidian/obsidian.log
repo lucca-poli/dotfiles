@@ -421,3 +421,24 @@
 2024-03-04 13:55:55 Success.
 2024-03-04 13:55:55 Latest version is 1.5.8
 2024-03-04 13:55:55 App is up to date.
+2024-03-05 11:22:22 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-05 11:22:22 Checking for update using Github
+2024-03-05 11:22:22 Failed to check for update using Github (net::ERR_INTERNET_DISCONNECTED)
+2024-03-05 11:22:22 Checking for update using obsidian.md
+2024-03-05 11:22:22 Failed to check for update using obsidian.md (net::ERR_INTERNET_DISCONNECTED)
+2024-03-05 14:16:18 Checking for update using Github
+2024-03-05 14:16:18 Success.
+2024-03-05 14:16:18 Latest version is 1.5.8
+2024-03-05 14:16:18 App is up to date.
+2024-03-05 18:37:57 Checking for update using Github
+2024-03-05 18:37:57 Success.
+2024-03-05 18:37:57 Latest version is 1.5.8
+2024-03-05 18:37:57 App is up to date.
+2024-03-05 19:37:58 Checking for update using Github
+2024-03-05 19:37:59 Success.
+2024-03-05 19:37:59 Latest version is 1.5.8
+2024-03-05 19:37:59 App is up to date.
+2024-03-05 20:37:58 Checking for update using Github
+2024-03-05 20:37:59 Success.
+2024-03-05 20:37:59 Latest version is 1.5.8
+2024-03-05 20:37:59 App is up to date.

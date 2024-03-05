@@ -25,6 +25,7 @@
       pkgs.go
       pkgs.rustup
       pkgs.nodejs_21
+      pkgs.ghdl-llvm
       
       # lf
       pkgs.lf

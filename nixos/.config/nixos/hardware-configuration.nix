@@ -14,6 +14,10 @@
   boot.extraModulePackages = [ ];
   services.xserver.videoDrivers = [ "amdgpu" ]; # wayland
 
+  # BLuetooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/a4f052cd-6128-4982-bee9-6afdae7fc0b1";
       fsType = "ext4";

@@ -8,6 +8,7 @@ roconf="~/.config/rofi/config.rasi"
 # rofi action
 
 case $1 in
+    e)  r_mode="electron" ;; 
     d)  r_mode="drun" ;; 
     w)  r_mode="window" ;;
     f)  r_mode="filebrowser" ;;
@@ -28,7 +29,7 @@ r_override="window {border: ${hypr_width}px; border-radius: ${wind_border}px;} e
 
 # launch rofi
 
-if [ "$r_mode" = "drun" ]; then
+if [ "$r_mode" = "electron" ]; then
     app=`$ConfDir/rofi/apps.sh | rofi -dmenu -theme-str "${r_override}" -config "${roconf}" | awk '{print $2}'`
 
     case $app in

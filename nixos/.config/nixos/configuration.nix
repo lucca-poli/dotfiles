@@ -108,7 +108,6 @@
 
     # System tools
     gcc
-    killall
     pulseaudio
     pamixer
     playerctl
@@ -147,6 +146,11 @@
       enable = true;
       driver = pkgs.libfprint-2-tod1-vfs0090;
     };
+  };
+
+  services.logind = {
+    extraConfig = "HandlePowerKey=suspend";
+    lidSwitch = "suspend";
   };
 
   # Open ports in the firewall.
