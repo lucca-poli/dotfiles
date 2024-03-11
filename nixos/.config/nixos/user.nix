@@ -20,12 +20,14 @@
       pkgs.pass
       pkgs.htop-vim
       pkgs.stow
+      # pkgs.bottles # windows apps
+      pkgs.quartus-prime-lite
 
       # Development
       pkgs.go
       pkgs.rustup
       pkgs.nodejs_21
-      pkgs.ghdl-llvm
+      pkgs.vhdl-ls # VHDL rust lsp
       
       # lf
       pkgs.lf
@@ -76,6 +78,16 @@
       pkgs.dunst
       pkgs.upower
     ];
+  };
+
+  environment.sessionVariables = {
+    ZDOTDIR="$HOME/.config/zsh";
+    XDG_CACHE_HOME  = "$HOME/.cache";
+    XDG_CONFIG_HOME = "$HOME/.config";
+    VHDL_LS_CONFIG = "$HOME/.config/vhdl_ls.toml";
+    # XDG_DATA_HOME   = "$HOME/.local/share";
+    # XDG_STATE_HOME  = "$HOME/.local/state";
+
   };
 
   # Fingerprint on swaylock

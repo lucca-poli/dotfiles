@@ -124,8 +124,8 @@ sed -i "/^gtk-icon-theme-name=/c\gtk-icon-theme-name=${IconSet}" $ConfDir/gtk-3.
 
 
 # gtk4
-rm $ConfDir/gtk-4.0
-ln -s /usr/share/themes/$ThemeSet/gtk-4.0 $ConfDir/gtk-4.0
+# rm $ConfDir/gtk-4.0
+# ln -s /usr/share/themes/$ThemeSet/gtk-4.0 $ConfDir/gtk-4.0
 
 
 # hyprland

@@ -49,6 +49,10 @@
   services.xserver = {
     layout = "br";
     xkbVariant = "thinkpad";
+      # xautolock = {
+      #   enable = true;
+      #   locker = ''${pkgs.swaylock-effects}/bin/sh'';
+      # };
   };
 
   # rtkit is optional but recommended
@@ -80,7 +84,6 @@
     '';
 
     shellAliases = {
-      update = "sudo nixos-rebuild switch --flake '/home/lucca/.dotfiles/nixos/.config/nixos#nixos'";
     };
   };
 
@@ -105,6 +108,7 @@
     file
     which
     fprintd # fingerprint
+    gparted # formatting disks
 
     # System tools
     gcc
@@ -148,6 +152,7 @@
     };
   };
 
+  # Power buttom suspends
   services.logind = {
     extraConfig = "HandlePowerKey=suspend";
     lidSwitch = "suspend";

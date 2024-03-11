@@ -18,3 +18,9 @@ export EDITOR=nvim
 source ~/.config/lf/lf.bash
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+function update () {
+    sudo cp /home/lucca/.dotfiles/nixos/.config/nixos/* /etc/nixos
+    sudo nixos-rebuild switch
+}
+
