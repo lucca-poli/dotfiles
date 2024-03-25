@@ -14,6 +14,7 @@ compinit
 
 # ENV variable
 export EDITOR=nvim
+export BROWSER=brave
 
 source ~/.config/lf/lf.bash
 eval "$(starship init zsh)"

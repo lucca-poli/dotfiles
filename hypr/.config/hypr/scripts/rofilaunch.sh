@@ -39,6 +39,9 @@ if [ "$r_mode" = "electron" ]; then
         spotify)
             spotify -enable-features=UseOzonePlatform -ozone-platform=wayland --ozone-platform-hint=auto
             ;;
+        brave)
+            brave -enable-features=UseOzonePlatform -ozone-platform=wayland --ozone-platform-hint=auto
+            ;;
         *)
             echo "App not found"
             ;;

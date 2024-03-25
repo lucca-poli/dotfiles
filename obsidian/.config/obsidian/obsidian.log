@@ -488,3 +488,143 @@
 2024-03-11 15:09:38 Success.
 2024-03-11 15:09:38 Latest version is 1.5.8
 2024-03-11 15:09:38 App is up to date.
+2024-03-13 01:06:42 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-13 01:06:42 Checking for update using Github
+2024-03-13 01:06:43 Success.
+2024-03-13 01:06:43 Latest version is 1.5.8
+2024-03-13 01:06:43 App is up to date.
+2024-03-15 11:45:37 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-15 11:45:37 Checking for update using Github
+2024-03-15 11:45:37 Success.
+2024-03-15 11:45:37 Latest version is 1.5.8
+2024-03-15 11:45:37 App is up to date.
+2024-03-16 13:29:12 Checking for update using Github
+2024-03-16 13:29:13 Success.
+2024-03-16 13:29:13 Latest version is 1.5.8
+2024-03-16 13:29:13 App is up to date.
+2024-03-16 19:08:36 Checking for update using Github
+2024-03-17 13:08:24 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-17 13:08:24 Checking for update using Github
+2024-03-17 13:08:25 Success.
+2024-03-17 13:08:25 Latest version is 1.5.8
+2024-03-17 13:08:25 App is up to date.
+2024-03-17 14:08:24 Checking for update using Github
+2024-03-17 14:08:24 Success.
+2024-03-17 14:08:24 Latest version is 1.5.8
+2024-03-17 14:08:24 App is up to date.
+2024-03-17 17:57:57 Checking for update using Github
+2024-03-17 17:57:57 Failed to check for update using Github (net::ERR_INTERNET_DISCONNECTED)
+2024-03-17 17:57:57 Checking for update using obsidian.md
+2024-03-17 17:57:57 Failed to check for update using obsidian.md (net::ERR_INTERNET_DISCONNECTED)
+2024-03-18 14:56:50 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-18 14:56:50 Checking for update using Github
+2024-03-18 14:56:50 Success.
+2024-03-18 14:56:50 Latest version is 1.5.8
+2024-03-18 14:56:50 App is up to date.
+2024-03-18 22:12:56 Checking for update using Github
+2024-03-18 22:12:56 Success.
+2024-03-18 22:12:56 Latest version is 1.5.8
+2024-03-18 22:12:56 App is up to date.
+2024-03-19 00:47:25 Loading main app package /nix/store/pd3md2jmhqwp0482q0p4qm4ysi430yf7-obsidian-1.5.8/share/obsidian/obsidian.asar
+2024-03-19 00:47:25 Checking for update using Github
+2024-03-19 00:47:27 Success.
+2024-03-19 00:47:27 Latest version is 1.5.8
+2024-03-19 00:47:27 App is up to date.
+2024-03-19 01:47:25 Checking for update using Github
+2024-03-19 01:47:25 Success.
+2024-03-19 01:47:25 Latest version is 1.5.8
+2024-03-19 01:47:25 App is up to date.
+2024-03-19 13:14:02 Checking for update using Github
+2024-03-19 13:14:02 Success.
+2024-03-19 13:14:02 Latest version is 1.5.8
+2024-03-19 13:14:02 App is up to date.
+2024-03-19 14:14:02 Checking for update using Github
+2024-03-19 14:14:07 Success.
+2024-03-19 14:14:07 Latest version is 1.5.8
+2024-03-19 14:14:07 App is up to date.
+2024-03-19 15:24:43 Checking for update using Github
+2024-03-19 15:24:43 Success.
+2024-03-19 15:24:43 Latest version is 1.5.8
+2024-03-19 15:24:43 App is up to date.
+2024-03-19 19:29:15 Checking for update using Github
+2024-03-19 19:29:15 Success.
+2024-03-19 19:29:15 Latest version is 1.5.11
+2024-03-19 19:29:15 Downloading update from https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.11/obsidian-1.5.11.asar.gz
+2024-03-19 19:29:19 Verifying hash & signature. Size= 8781777
+2024-03-19 19:29:19 Saving file
+2024-03-19 19:29:19 Update complete.
+2024-03-22 13:09:47 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 13:09:47 Checking for update using Github
+2024-03-22 13:09:48 Success.
+2024-03-22 13:09:48 Latest version is 1.5.11
+2024-03-22 13:09:48 App is up to date.
+2024-03-22 13:28:34 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 13:28:34 Checking for update using Github
+2024-03-22 13:28:35 Success.
+2024-03-22 13:28:35 Latest version is 1.5.11
+2024-03-22 13:28:35 App is up to date.
+2024-03-22 13:29:38 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 13:29:38 Checking for update using Github
+2024-03-22 13:29:38 Success.
+2024-03-22 13:29:38 Latest version is 1.5.11
+2024-03-22 13:29:38 App is up to date.
+2024-03-22 17:58:24 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 17:58:24 Checking for update using Github
+2024-03-22 17:58:25 Success.
+2024-03-22 17:58:25 Latest version is 1.5.11
+2024-03-22 17:58:25 App is up to date.
+2024-03-22 17:58:36 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 17:58:36 Checking for update using Github
+2024-03-22 17:58:36 Success.
+2024-03-22 17:58:36 Latest version is 1.5.11
+2024-03-22 17:58:36 App is up to date.
+2024-03-22 18:31:27 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 18:31:28 Checking for update using Github
+2024-03-22 18:31:28 Success.
+2024-03-22 18:31:28 Latest version is 1.5.11
+2024-03-22 18:31:28 App is up to date.
+2024-03-22 18:31:46 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 18:31:46 Checking for update using Github
+2024-03-22 18:31:46 Success.
+2024-03-22 18:31:46 Latest version is 1.5.11
+2024-03-22 18:31:46 App is up to date.
+2024-03-22 18:31:55 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 18:31:55 Checking for update using Github
+2024-03-22 18:31:55 Success.
+2024-03-22 18:31:55 Latest version is 1.5.11
+2024-03-22 18:31:55 App is up to date.
+2024-03-22 18:36:20 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 18:36:20 Checking for update using Github
+2024-03-22 18:36:20 Success.
+2024-03-22 18:36:20 Latest version is 1.5.11
+2024-03-22 18:36:20 App is up to date.
+2024-03-22 18:51:38 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 18:51:38 Checking for update using Github
+2024-03-22 18:51:38 Success.
+2024-03-22 18:51:38 Latest version is 1.5.11
+2024-03-22 18:51:38 App is up to date.
+2024-03-22 20:57:38 Loading updated app package /home/lucca/.config/obsidian/obsidian-1.5.11.asar
+2024-03-22 20:57:38 Checking for update using Github
+2024-03-22 20:57:39 Success.
+2024-03-22 20:57:39 Latest version is 1.5.11
+2024-03-22 20:57:39 App is up to date.
+2024-03-23 22:42:09 Checking for update using Github
+2024-03-23 22:42:09 Success.
+2024-03-23 22:42:09 Latest version is 1.5.11
+2024-03-23 22:42:09 App is up to date.
+2024-03-24 14:54:24 Checking for update using Github
+2024-03-24 14:54:24 Success.
+2024-03-24 14:54:24 Latest version is 1.5.11
+2024-03-24 14:54:24 App is up to date.
+2024-03-24 15:54:24 Checking for update using Github
+2024-03-24 15:54:25 Success.
+2024-03-24 15:54:25 Latest version is 1.5.11
+2024-03-24 15:54:25 App is up to date.
+2024-03-24 22:41:15 Checking for update using Github
+2024-03-24 22:41:15 Success.
+2024-03-24 22:41:15 Latest version is 1.5.11
+2024-03-24 22:41:15 App is up to date.
+2024-03-24 23:41:15 Checking for update using Github
+2024-03-24 23:41:15 Success.
+2024-03-24 23:41:15 Latest version is 1.5.11
+2024-03-24 23:41:15 App is up to date.

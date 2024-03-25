@@ -18,16 +18,19 @@
       pkgs.kitty
       pkgs.starship
       pkgs.pass
-      pkgs.htop-vim
+      pkgs.htop
       pkgs.stow
+      pkgs.btop
       # pkgs.bottles # windows apps
+      pkgs.libreoffice-qt
       pkgs.quartus-prime-lite
+      pkgs.pandoc
 
       # Development
       pkgs.go
       pkgs.rustup
       pkgs.nodejs_21
-      pkgs.vhdl-ls # VHDL rust lsp
+      pkgs.ghdl
       
       # lf
       pkgs.lf
@@ -39,6 +42,7 @@
 
       # Hyprland
       pkgs.jq # A lightweight and flexible command-line JSON processor
+      pkgs.xdg-utils
       pkgs.imagemagick
       pkgs.libnotify
       pkgs.parallel
@@ -51,6 +55,7 @@
       pkgs.slurp
       pkgs.cava
       pkgs.firefox
+      pkgs.brave
       pkgs.feh
       pkgs.waybar
       pkgs.hyprpicker
@@ -84,7 +89,6 @@
     ZDOTDIR="$HOME/.config/zsh";
     XDG_CACHE_HOME  = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
-    VHDL_LS_CONFIG = "$HOME/.config/vhdl_ls.toml";
     # XDG_DATA_HOME   = "$HOME/.local/share";
     # XDG_STATE_HOME  = "$HOME/.local/state";
 
