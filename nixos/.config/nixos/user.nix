@@ -21,6 +21,7 @@
       pkgs.htop
       pkgs.stow
       pkgs.btop
+      pkgs.zoom-us
       # pkgs.bottles # windows apps
       pkgs.libreoffice-qt
       pkgs.quartus-prime-lite
