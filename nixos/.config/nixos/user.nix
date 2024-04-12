@@ -27,14 +27,16 @@
       pkgs.quartus-prime-lite
       pkgs.pandoc
 
-      # Development
+      # Development/Poli
       pkgs.go
       pkgs.rustup
       pkgs.nodejs_21
       pkgs.ghdl
+      pkgs.gtkwave
       
       # lf
       pkgs.lf
+      pkgs.glib
       pkgs.zip
       pkgs.unzip
       pkgs.ghostscript

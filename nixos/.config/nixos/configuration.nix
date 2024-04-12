@@ -123,7 +123,7 @@
     usbutils # lsusb
     brightnessctl
     bluez # Bluetooth
-    blueman
+    blueman # Bluetooth
 
     # Secrets
     gnupg
@@ -158,6 +158,8 @@
     extraConfig = "HandlePowerKey=suspend";
     lidSwitch = "suspend";
   };
+
+  services.blueman.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

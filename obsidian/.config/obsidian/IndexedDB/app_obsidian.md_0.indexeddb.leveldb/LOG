@@ -1,3 +1,12 @@
-2024/03/31-09:07:14.953 7e27 Reusing MANIFEST /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
-2024/03/31-09:07:14.953 7e27 Recovering log #11
-2024/03/31-09:07:14.961 7e27 Reusing old log /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000011.log 
+2024/04/08-21:52:42.194 3a20 Reusing MANIFEST /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/MANIFEST-000001
+2024/04/08-21:52:42.195 3a20 Recovering log #19
+2024/04/08-21:52:42.226 3a20 Reusing old log /home/lucca/.config/obsidian/IndexedDB/app_obsidian.md_0.indexeddb.leveldb/000019.log 
+2024/04/09-10:39:48.946 38fd Level-0 table #24: started
+2024/04/09-10:39:48.979 38fd Level-0 table #24: 1297218 bytes OK
+2024/04/09-10:39:48.982 38fd Delete type=0 #19
+2024/04/09-10:42:02.671 38fd Compacting 1@1 + 1@2 files
+2024/04/09-10:42:02.687 38fd Generated table #25@1: 954 keys, 252150 bytes
+2024/04/09-10:42:02.688 38fd Compacted 1@1 + 1@2 files => 252150 bytes
+2024/04/09-10:42:02.690 38fd compacted to: files[ 0 0 1 0 0 0 0 ]
+2024/04/09-10:42:02.690 38fd Delete type=2 #21
+2024/04/09-10:42:02.690 38fd Delete type=2 #24
