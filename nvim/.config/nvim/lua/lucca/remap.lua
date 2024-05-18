@@ -1,7 +1,6 @@
 -- Splits and split moves
--- vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
--- vim.keymap.set("n", "<leader>sh", ":split<CR>")
--- vim.keymap.set("n", "<leader>sd", "<C-w>q")
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+vim.keymap.set("n", "<leader>sh", ":split<CR>")
 vim.keymap.set("n", "<C-l>", "<C-w>w")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

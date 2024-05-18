@@ -109,7 +109,6 @@
     file
     which
     fprintd # fingerprint
-    gparted # formatting disks
 
     # System tools
     gcc

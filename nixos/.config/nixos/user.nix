@@ -33,6 +33,20 @@
       pkgs.nodejs_21
       pkgs.ghdl
       pkgs.gtkwave
+        # Python
+        (pkgs.python311.withPackages (ps: with ps; [
+          numpy # these two are
+          scipy # probably redundant to pandas
+          scikit-learn
+          pandas
+          matplotlib
+          statsmodels
+          scikitlearn
+
+          jupyterlab
+          jupyterlab-lsp
+          python-lsp-server
+        ]))
       
       # lf
       pkgs.lf
@@ -58,7 +72,7 @@
       pkgs.slurp
       pkgs.cava
       pkgs.firefox
-      pkgs.brave
+      pkgs-unstable.brave
       pkgs.feh
       pkgs.waybar
       pkgs.hyprpicker
