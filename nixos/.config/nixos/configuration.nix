@@ -76,17 +76,17 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  programs.zsh = {
-    enable = true;
-    syntaxHighlighting.enable = true;
-    autosuggestions.enable = true;
-    interactiveShellInit = ''
-      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-    '';
-
-    shellAliases = {
-    };
-  };
+  # programs.zsh = {
+  #   enable = true;
+  #   syntaxHighlighting.enable = true;
+  #   autosuggestions.enable = true;
+  #   interactiveShellInit = ''
+  #     source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+  #   '';
+  #
+  #   shellAliases = {
+  #   };
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -109,6 +109,11 @@
     file
     which
     fprintd # fingerprint
+
+    # Games
+    pkgs.libGL
+    pkgs.libGLU
+    pkgs.mesa
 
     # System tools
     gcc

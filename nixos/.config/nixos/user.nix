@@ -10,7 +10,7 @@
     description = "Luiz Carlos de Azevedo Santana";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     isNormalUser = true;
-    shell = pkgs.zsh;
+    shell = pkgs.nushell;
     packages = [
       # utils
       pkgs-unstable.obsidian
@@ -22,10 +22,9 @@
       pkgs.stow
       pkgs.btop
       pkgs.zoom-us
-      # pkgs.bottles # windows apps
-      pkgs.libreoffice-qt
-      pkgs.quartus-prime-lite
       pkgs.pandoc
+      pkgs.sl
+      pkgs.mpv-unwrapped
 
       # Development/Poli
       pkgs.go
@@ -33,20 +32,12 @@
       pkgs.nodejs_21
       pkgs.ghdl
       pkgs.gtkwave
-        # Python
-        (pkgs.python311.withPackages (ps: with ps; [
-          numpy # these two are
-          scipy # probably redundant to pandas
-          scikit-learn
-          pandas
-          matplotlib
-          statsmodels
-          scikitlearn
 
-          jupyterlab
-          jupyterlab-lsp
-          python-lsp-server
-        ]))
+      # Minecraft
+      pkgs.minecraft
+
+        # Python
+        pkgs.conda
       
       # lf
       pkgs.lf
@@ -71,8 +62,8 @@
       pkgs.swappy
       pkgs.slurp
       pkgs.cava
-      pkgs.firefox
-      pkgs-unstable.brave
+      # pkgs.firefox
+      pkgs.brave
       pkgs.feh
       pkgs.waybar
       pkgs.hyprpicker
@@ -103,7 +94,6 @@
   };
 
   environment.sessionVariables = {
-    ZDOTDIR="$HOME/.config/zsh";
     XDG_CACHE_HOME  = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
     # XDG_DATA_HOME   = "$HOME/.local/share";

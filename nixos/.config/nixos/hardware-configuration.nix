@@ -14,6 +14,12 @@
   boot.extraModulePackages = [ ];
   services.xserver.videoDrivers = [ "amdgpu" ]; # wayland
 
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
   # BLuetooth
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
