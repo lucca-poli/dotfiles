@@ -22,8 +22,8 @@ cmd setwallpaper ${{
     hyprctl hyprpaper wallpaper "$monitor, $f"
 }}
 
-cmd quit &{{
-    # pwd > $LF_CD_FILE
+cmd quit-and-cd &{{
+    pwd > $LF_CD_FILE
     lf -remote "send $id quit"
 }}
 
@@ -60,9 +60,10 @@ cmd on-cd &{{
 map m
 
 # Bindings
-map q quit
+map q quit-and-cd
 map <enter> open
 map A rename
+map x cut
 map md mkdir
 map mf mkfile
 map sp setwallpaper

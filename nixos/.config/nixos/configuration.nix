@@ -48,8 +48,8 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "br";
-    xkbVariant = "thinkpad";
+    xkb.layout = "br";
+    xkb.variant = "thinkpad";
       # xautolock = {
       #   enable = true;
       #   locker = ''${pkgs.swaylock-effects}/bin/sh'';
@@ -76,17 +76,17 @@
   # Configure console keymap
   console.keyMap = "br-abnt2";
 
-  # programs.zsh = {
-  #   enable = true;
-  #   syntaxHighlighting.enable = true;
-  #   autosuggestions.enable = true;
-  #   interactiveShellInit = ''
-  #     source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-  #   '';
-  #
-  #   shellAliases = {
-  #   };
-  # };
+  programs.zsh = {
+    enable = true;
+    syntaxHighlighting.enable = true;
+    autosuggestions.enable = true;
+    interactiveShellInit = ''
+      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+    '';
+
+    shellAliases = {
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -136,7 +136,10 @@
   environment = {
       variables.EDITOR = "nvim";
       # Make Eletron and Chromium based apps work
-      sessionVariables.NIXOS_OZONE_WL = "1";
+      sessionVariables = {
+          ZDOTDIR = "$HOME/.config/zsh";
+          NIXOS_OZONE_WL = "1";
+      };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -144,7 +147,7 @@
   # programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "curses";
+    pinentryPackage = pkgs.pinentry-curses;
     # enableSSHSupport = true;
   };
 

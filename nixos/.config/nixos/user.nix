@@ -10,9 +10,9 @@
     description = "Luiz Carlos de Azevedo Santana";
     extraGroups = [ "networkmanager" "wheel" "audio" ];
     isNormalUser = true;
-    shell = pkgs.nushell;
+    shell = pkgs.zsh;
     packages = [
-      # utils
+      # util
       pkgs-unstable.obsidian
       pkgs.spotify
       pkgs.kitty
@@ -25,16 +25,14 @@
       pkgs.pandoc
       pkgs.sl
       pkgs.mpv-unwrapped
+      pkgs.anki-bin
 
       # Development/Poli
       pkgs.go
       pkgs.rustup
-      pkgs.nodejs_21
-      pkgs.ghdl
-      pkgs.gtkwave
-
-      # Minecraft
-      pkgs.minecraft
+      pkgs.nodejs_22
+      # pkgs.ghdl
+      # pkgs.gtkwave
 
         # Python
         pkgs.conda
@@ -62,7 +60,7 @@
       pkgs.swappy
       pkgs.slurp
       pkgs.cava
-      # pkgs.firefox
+      pkgs.firefox
       pkgs.brave
       pkgs.feh
       pkgs.waybar
