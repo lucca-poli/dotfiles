@@ -13,7 +13,8 @@
     shell = pkgs.zsh;
     packages = [
       # util
-      pkgs-unstable.obsidian
+      pkgs.obsidian
+      pkgs.stremio
       pkgs.spotify
       pkgs.kitty
       pkgs.starship
@@ -22,10 +23,13 @@
       pkgs.stow
       pkgs.btop
       pkgs.zoom-us
-      pkgs.pandoc
+      pkgs.pandoc # Markup converter
       pkgs.sl
-      pkgs.mpv-unwrapped
+      pkgs.mpv-unwrapped # Audio player
       pkgs.anki-bin
+      pkgs.texliveSmall # Latex (.tex) to pdf
+      pkgs.kicad # Circuit simulator
+      pkgs.poppler_utils # Merge pdfs
 
       # Development/Poli
       pkgs.go
