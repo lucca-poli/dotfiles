@@ -51,6 +51,9 @@ local nvim_lsp = require("lspconfig")
 nvim_lsp.lua_ls.setup {
     on_attach = on_attach
 }
+nvim_lsp.htmx.setup {
+    on_attach = on_attach
+}
 nvim_lsp.pyright.setup {
     on_attach = on_attach
 }

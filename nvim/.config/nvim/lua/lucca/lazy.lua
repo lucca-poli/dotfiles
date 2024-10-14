@@ -1,10 +1,4 @@
 require("lazy").setup({
-    "folke/neodev.nvim",
-
-    --debugger
-    { "rcarriga/nvim-dap-ui", dependencies = "mfussenegger/nvim-dap" },
-    "jbyuki/one-small-step-for-vimkind",
-
     -- Lualine
     {
         "nvim-lualine/lualine.nvim",
