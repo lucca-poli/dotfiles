@@ -14,7 +14,7 @@ compinit
 
 # ENV variable
 export EDITOR=nvim
-export BROWSER=brave
+export BROWSER=firefox
 
 source ~/.config/lf/lf.bash
 eval "$(starship init zsh)"
@@ -25,3 +25,9 @@ function update () {
     sudo nixos-rebuild switch
 }
 
+function wifi-eduroam () {
+    strongest_bssid=$(nmcli -f BSSID,SSID,SIGNAL dev wifi list | grep 'eduroam' | sort -k 3 -nr | head -n 1 | awk '{print $1}')
+
+    nmcli connection modify wifi-eduroam 802-11-wireless.bssid $strongest_bssid 
+    nmcli connection up wifi-eduroam
+}

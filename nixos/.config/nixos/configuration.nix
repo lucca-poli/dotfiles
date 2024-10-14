@@ -27,6 +27,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  networking.networkmanager.dhcp = "dhcpcd";
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -172,7 +173,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.checkReversePath = "loose";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

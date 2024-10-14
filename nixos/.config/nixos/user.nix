@@ -28,8 +28,10 @@
       pkgs.mpv-unwrapped # Audio player
       pkgs.anki-bin
       pkgs.texliveSmall # Latex (.tex) to pdf
-      pkgs.kicad # Circuit simulator
+      # pkgs.kicad # Circuit simulator
       pkgs.poppler_utils # Merge pdfs
+      pkgs.libreoffice
+      pkgs.xorg.xev
 
       # Development/Poli
       pkgs.go
@@ -37,6 +39,7 @@
       pkgs.nodejs_22
       # pkgs.ghdl
       # pkgs.gtkwave
+      pkgs.gnumake
 
         # Python
         pkgs.conda
@@ -49,6 +52,7 @@
       pkgs.ghostscript
       pkgs.fontpreview
       pkgs.pistol
+
 
       # Hyprland
       pkgs.jq # A lightweight and flexible command-line JSON processor
@@ -64,8 +68,9 @@
       pkgs.swappy
       pkgs.slurp
       pkgs.cava
-      pkgs.firefox
       pkgs.brave
+      pkgs.microsoft-edge
+      pkgs.firefox
       pkgs.feh
       pkgs.waybar
       pkgs.hyprpicker
