@@ -1,6 +1,0 @@
-2024/02/12-10:49:10.429 a1c1 Creating DB /home/lucca/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb since it was missing.
-2024/02/12-10:49:10.434 a1c1 Reusing MANIFEST /home/lucca/.config/obsidian/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/12-10:49:12.709 a1c1 Level-0 table #5: started
-2024/02/12-10:49:12.711 a1c1 Level-0 table #5: 6721 bytes OK
-2024/02/12-10:49:12.713 a1c1 Delete type=0 #3
-2024/02/12-10:49:12.713 a1c1 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

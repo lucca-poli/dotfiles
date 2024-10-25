@@ -1,0 +1,38 @@
+#!/bin/bash
+
+in_tmux() {
+    local name=$1
+    if [ -n "$TMUX" ]; then
+        tmux switch-client -t "$name"
+    else
+        tmux attach-session -t "$name"
+    fi
+}
+
+# List directories in $HOME, $HOME/Documents, and $HOME/.config
+home_dirs=$(find "$HOME" -maxdepth 1 -type d)
+documents_dirs=$(find "$HOME/Documents" -maxdepth 2 -type d)
+config_dirs=$(find -L "$HOME/.config" -maxdepth 1 -type d)
+    
+# Combine directory lists
+all_dirs=$(echo -e "$home_dirs\n$documents_dirs\n$config_dirs")
+all_dirs=$(echo "$all_dirs" | sort | uniq)
+all_dirs=$(echo -e "Exit\n$all_dirs")
+    
+# Use fzf to select a directory
+selected_dir=$(echo "$all_dirs" | fzf)
+
+if [ "$selected_dir" = "Exit" ]; then
+    echo "No session selected."
+    exit 0
+else
+    session_name=$(basename "$selected_dir")
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+        in_tmux $session_name
+        echo "Session exist!"
+    else
+        tmux new-session -d -s "$session_name" -c "$selected_dir"
+        in_tmux $session_name
+        /home/lucca/.config/zsh/default_tmux.sh
+    fi  
+fi
