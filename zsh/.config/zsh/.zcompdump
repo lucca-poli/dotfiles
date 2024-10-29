@@ -773,8 +773,6 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
-'lf' '_lf'
-'lfcd' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'light' '_webbrowser'
@@ -1751,6 +1749,7 @@ _comps=(
 'yash' '_sh'
 'yast' '_yast'
 'yast2' '_yast'
+'yazi' '_yazi'
 'ypbind' '_yp'
 'ypcat' '_yp'
 'ypmatch' '_yp'
@@ -1930,8 +1929,8 @@ bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
 autoload -Uz _cargo _dolphin _dunst _dunstctl _kitty \
-            _konsole _lf _mpv _parallel _pass \
-            _rustup _starship _swaylock _swww _wlogout \
+            _konsole _mpv _parallel _pass _rustup \
+            _starship _swaylock _swww _wlogout _yazi \
             _bluetoothctl _bootctl _busctl _coredumpctl _hostnamectl \
             _hyprctl _hyprpm _journalctl _localectl _loginctl \
             _machinectl _networkctl _nix _nix-build _nix-channel \

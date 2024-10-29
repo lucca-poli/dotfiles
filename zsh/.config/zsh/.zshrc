@@ -10,13 +10,14 @@ zstyle :compinstall filename '$(echo $ZDOTDIR)/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+# Keybinds
+# bindkey -s "^f" "tmux-sessionizer\n"
 
 # ENV variable
 export EDITOR=nvim
 export BROWSER=firefox
 
-source ~/.config/lf/lf.bash
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -31,3 +32,14 @@ function wifi-eduroam () {
     nmcli connection modify wifi-eduroam 802-11-wireless.bssid $strongest_bssid 
     nmcli connection up wifi-eduroam
 }
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+alias st=~/.config/tmux/start_tmux.sh

@@ -58,7 +58,7 @@
   };
 
   # rtkit is optional but recommended
-  sound.enable = false;
+  sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -103,6 +103,7 @@
     ripgrep
     tree
     neovim
+    glib # trash utility in treetabs neovim
     udiskie
     wl-clipboard
     zoxide

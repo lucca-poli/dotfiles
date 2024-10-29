@@ -17,6 +17,9 @@
       pkgs.stremio
       pkgs.spotify
       pkgs.kitty
+      pkgs.whatsapp-for-linux
+      pkgs.tmux
+      # pkgs.alacritty quando tiver image support eu adiciono
       pkgs.starship
       pkgs.pass
       pkgs.htop
@@ -26,12 +29,14 @@
       pkgs.pandoc # Markup converter
       pkgs.sl
       pkgs.mpv-unwrapped # Audio player
+      pkgs.vlc
       pkgs.anki-bin
       pkgs.texliveSmall # Latex (.tex) to pdf
       # pkgs.kicad # Circuit simulator
       pkgs.poppler_utils # Merge pdfs
       pkgs.libreoffice
-      pkgs.xorg.xev
+      pkgs.xorg.xev # Check keyboard keys
+      pkgs.telegram-desktop
 
       # Development/Poli
       pkgs.go
@@ -44,14 +49,10 @@
         # Python
         pkgs.conda
       
-      # lf
-      pkgs.lf
-      pkgs.glib
+      # yazi
+      pkgs.yazi
       pkgs.zip
       pkgs.unzip
-      pkgs.ghostscript
-      pkgs.fontpreview
-      pkgs.pistol
 
 
       # Hyprland
