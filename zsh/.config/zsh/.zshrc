@@ -36,7 +36,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias st=~/.config/zsh/start_tmux.sh
+alias st=~/.config/tmux/start_tmux.sh
 
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/zsh-vi-mode/zsh-vi-mode.plugin.zsh
