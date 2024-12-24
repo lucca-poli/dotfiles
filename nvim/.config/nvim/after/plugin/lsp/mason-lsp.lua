@@ -48,15 +48,28 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 
 local nvim_lsp = require("lspconfig")
 
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
+nvim_lsp.denols.setup({
+    on_attach = on_attach,
+})
+-- Prevent tsserver from attaching to deno projects
+-- lspconfig.tsserver.setup({
+--     root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json", ".git"),
+--     single_file_support = true,
+--     on_attach = on_attach,
+-- })
+
 nvim_lsp.lua_ls.setup {
     on_attach = on_attach
 }
 nvim_lsp.bashls.setup {
     on_attach = on_attach
 }
-nvim_lsp.htmx.setup {
-    on_attach = on_attach
-}
+-- nvim_lsp.htmx.setup {
+--     on_attach = on_attach
+-- }
 nvim_lsp.pyright.setup {
     on_attach = on_attach
 }
