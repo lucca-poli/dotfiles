@@ -14,10 +14,9 @@
   boot.extraModulePackages = [ ];
   services.xserver.videoDrivers = [ "amdgpu" ]; # wayland
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   # BLuetooth

@@ -1,2 +1,6 @@
-# Untrack my files (including configuration files with passwords)
-undodir/
+tags
+test.sh
+.luarc.json
+nvim
+
+spell/

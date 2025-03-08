@@ -1,10 +1,10 @@
 {
   description = "A simple NixOS flake";
 
-  # NixOS official package source, using the nixos-24.05 branch here
+  # NixOS official package source, using the nixos-24.11 branch here
   inputs = {
       nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+      nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs: {

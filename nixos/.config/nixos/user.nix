@@ -8,7 +8,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lucca = {
     description = "Luiz Carlos de Azevedo Santana";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "docker" ];
     isNormalUser = true;
     shell = pkgs.zsh;
     packages = [
@@ -36,24 +36,36 @@
       pkgs.poppler_utils # Merge pdfs
       pkgs.libreoffice
       pkgs.xorg.xev # Check keyboard keys
-      pkgs.telegram-desktop
+      pkgs.ani-cli # Watch animes
 
       # Development/Poli
       pkgs.go
       pkgs.rustup
       pkgs.nodejs_22
-      # pkgs.ghdl
-      # pkgs.gtkwave
       pkgs.gnumake
+      pkgs.deno
+      pkgs.docker_26
+      pkgs.yarn-berry
 
-        # Python
-        pkgs.conda
+      # Package managers
+      pkgs.conda
+      pkgs.luajitPackages.luarocks
       
       # yazi
       pkgs.yazi
       pkgs.zip
       pkgs.unzip
 
+      # Neovim
+      pkgs.lua-language-server
+      pkgs.typescript-language-server
+      pkgs.stylua
+      pkgs.nodePackages.prettier
+
+      # Gaming
+      pkgs.prismlauncher
+      pkgs.temurin-jre-bin-8
+      # pkgs.zulu
 
       # Hyprland
       pkgs.jq # A lightweight and flexible command-line JSON processor
@@ -70,6 +82,7 @@
       pkgs.slurp
       pkgs.cava
       pkgs.brave
+      pkgs.google-chrome
       pkgs.microsoft-edge
       pkgs.firefox
       pkgs.feh
@@ -100,6 +113,8 @@
       pkgs.upower
     ];
   };
+
+  virtualisation.docker.enable = true;
 
   environment.sessionVariables = {
     XDG_CACHE_HOME  = "$HOME/.cache";

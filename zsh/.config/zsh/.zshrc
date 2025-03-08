@@ -22,8 +22,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 function update () {
-    sudo cp /home/lucca/.dotfiles/nixos/.config/nixos/* /etc/nixos
-    sudo nixos-rebuild switch
+    sudo cp /home/lucca/dotfiles/nixos/.config/nixos/* /etc/nixos
+    sudo nixos-rebuild switch --flake ~/dotfiles/nixos/.config/nixos
 }
 
 function wifi-eduroam () {
@@ -43,3 +43,4 @@ function y() {
 }
 
 alias st=~/.config/tmux/start_tmux.sh
+
