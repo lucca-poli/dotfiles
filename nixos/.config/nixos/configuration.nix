@@ -17,6 +17,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Brightness fix
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_6;
+
   networking.hostName = "nixos"; # Define your hostname.
   system.nssDatabases.hosts = ["files" "mymachines" "dns" "myhostname"];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -30,7 +33,7 @@
   networking.networkmanager.dhcp = "dhcpcd";
 
   # Set your time zone.
-  time.timeZone = "America/Sao_Paulo";
+  time.timeZone = "Europe/Berlin";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -72,7 +75,11 @@
   };
 
   # Nerd fonts
-  fonts.packages = [ pkgs.nerdfonts ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.symbols-only
+  ];
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
@@ -157,7 +164,7 @@
     enable = true;
     tod = {
       enable = true;
-      driver = pkgs.libfprint-2-tod1-vfs0090;
+      driver = pkgs.libfprint-2-tod1-goodix;
     };
   };
 
@@ -181,5 +188,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

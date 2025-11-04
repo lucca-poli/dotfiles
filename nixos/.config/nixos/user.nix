@@ -17,7 +17,6 @@
       pkgs.stremio
       pkgs.spotify
       pkgs.kitty
-      pkgs.whatsapp-for-linux
       pkgs.tmux
       # pkgs.alacritty quando tiver image support eu adiciono
       pkgs.starship
@@ -26,31 +25,28 @@
       pkgs.stow
       pkgs.btop
       pkgs.zoom-us
-      pkgs.pandoc # Markup converter
       pkgs.sl
       pkgs.mpv-unwrapped # Audio player
-      pkgs.vlc
-      pkgs.anki-bin
       pkgs.texliveSmall # Latex (.tex) to pdf
-      # pkgs.kicad # Circuit simulator
-      pkgs.poppler_utils # Merge pdfs
-      pkgs.libreoffice
+      # pkgs.poppler_utils # Merge pdfs
+      # pkgs.libreoffice
       pkgs.xorg.xev # Check keyboard keys
+      pkgs.google-chrome # For tests in whatsapp for IC
       pkgs.ani-cli # Watch animes
+      pkgs.wlsunset
+      pkgs.xorg.xbacklight
 
       # Development/Poli
-      pkgs.go
       pkgs.rustup
       pkgs.nodejs_22
       pkgs.gnumake
-      pkgs.deno
-      pkgs.docker_26
-      pkgs.yarn-berry
+      pkgs.graphviz
+      pkgs.wireshark
 
       # Package managers
-      pkgs.conda
+      pkgs.uv
       pkgs.luajitPackages.luarocks
-      
+
       # yazi
       pkgs.yazi
       pkgs.zip
@@ -64,8 +60,10 @@
 
       # Gaming
       pkgs.prismlauncher
+      pkgs.hmcl
       pkgs.temurin-jre-bin-8
-      # pkgs.zulu
+      pkgs.temurin-jre-bin-21
+      pkgs.zulu
 
       # Hyprland
       pkgs.jq # A lightweight and flexible command-line JSON processor
@@ -83,7 +81,6 @@
       pkgs.cava
       pkgs.brave
       pkgs.google-chrome
-      pkgs.microsoft-edge
       pkgs.firefox
       pkgs.feh
       pkgs.waybar
@@ -123,6 +120,9 @@
     # XDG_STATE_HOME  = "$HOME/.local/state";
 
   };
+
+  # Dynamic links for python env in uv
+  programs.nix-ld.enable = true;
 
   # Fingerprint on swaylock
   security.pam.services.swaylock = {};

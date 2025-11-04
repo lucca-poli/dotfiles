@@ -11,6 +11,7 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ "amdgpu" ]; # Fonts fix
   boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelParams = ["amdgpu.backlight=0"];
   boot.extraModulePackages = [ ];
   services.xserver.videoDrivers = [ "amdgpu" ]; # wayland
 

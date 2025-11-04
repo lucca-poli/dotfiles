@@ -12,12 +12,11 @@ in_tmux() {
 # List directories in $HOME, $HOME/Documents, and $HOME/.config
 home_dirs=$(find "$HOME" -maxdepth 1 -type d)
 documents_dirs=$(find "$HOME/Documents" -maxdepth 2 -type d)
-ic_dir=$(find "$HOME/Documents/engineering/IC" -maxdepth 2 -type d)
-control_dir=$(find "$HOME/Documents/engineering/controle" -maxdepth 2 -type d)
+engineering_dir=$(find "$HOME/Documents/engineering" -maxdepth 3 -type d)
 config_dirs=$(find -L "$HOME/.config" -maxdepth 1 -type d)
     
 # Combine directory lists
-all_dirs=$(echo -e "$home_dirs\n$documents_dirs\n$config_dirs\n$ic_dir\n$control_dir")
+all_dirs=$(echo -e "$home_dirs\n$documents_dirs\n$config_dirs\n$engineering_dir")
 all_dirs=$(echo "$all_dirs" | sort | uniq)
 all_dirs=$(echo -e "Exit\n$all_dirs")
     

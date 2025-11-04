@@ -1,0 +1,6 @@
+    "custom/night_mode": {
+        "format": "",
+        "on-click": "wlsunset -l -23.5 -L -46.6 &",
+        "on-click-right": "pkill wlsunset",
+    },
+
