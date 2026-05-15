@@ -2,17 +2,19 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ 
-  config, 
+{
+  config,
   pkgs,
-  ... 
-}: {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./user.nix
-    ];
-  
+  pkgs-unstable,
+  ...
+}:
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./user.nix
+  ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -21,7 +23,12 @@
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_6;
 
   networking.hostName = "nixos"; # Define your hostname.
-  system.nssDatabases.hosts = ["files" "mymachines" "dns" "myhostname"];
+  system.nssDatabases.hosts = [
+    "files"
+    "mymachines"
+    "dns"
+    "myhostname"
+  ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -54,10 +61,10 @@
   services.xserver = {
     xkb.layout = "br";
     xkb.variant = "thinkpad";
-      # xautolock = {
-      #   enable = true;
-      #   locker = ''${pkgs.swaylock-effects}/bin/sh'';
-      # };
+    # xautolock = {
+    #   enable = true;
+    #   locker = ''${pkgs.swaylock-effects}/bin/sh'';
+    # };
   };
 
   # rtkit is optional but recommended
@@ -100,7 +107,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
@@ -125,6 +135,7 @@
 
     # System tools
     gcc
+    cmake
     pulseaudio
     pamixer
     playerctl
@@ -142,12 +153,12 @@
   ];
 
   environment = {
-      variables.EDITOR = "nvim";
-      # Make Eletron and Chromium based apps work
-      sessionVariables = {
-          ZDOTDIR = "$HOME/.config/zsh";
-          NIXOS_OZONE_WL = "1";
-      };
+    variables.EDITOR = "nvim";
+    # Make Eletron and Chromium based apps work
+    sessionVariables = {
+      ZDOTDIR = "$HOME/.config/zsh";
+      NIXOS_OZONE_WL = "1";
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -169,8 +180,8 @@
   };
 
   # Power buttom suspends
-  services.logind = {
-    extraConfig = "HandlePowerKey=suspend";
+  services.logind.settings.Login = {
+    powerKey = "suspend";
     lidSwitch = "suspend";
   };
 
@@ -188,5 +199,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }

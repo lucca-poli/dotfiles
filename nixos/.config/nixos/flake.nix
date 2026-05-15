@@ -1,24 +1,34 @@
 {
   description = "A simple NixOS flake";
 
-  # NixOS official package source, using the nixos-25.05 branch here
   inputs = {
-      nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
-      system = "x86_64-linux";
-      specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {
-          system = system;
-          config.allowUnfree = true;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-unstable,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        ### ✅ HERE: pass overlays and other values to all modules
+        specialArgs = {
+          pkgs-unstable = import nixpkgs-unstable {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
         };
+
+        ### ❗ NO arguments are passed here
+        modules = [
+          ./configuration.nix
+        ];
       };
-      modules = [
-        ./configuration.nix
-      ];
     };
-  };
 }
