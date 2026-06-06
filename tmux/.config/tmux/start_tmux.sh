@@ -14,12 +14,14 @@ home_dirs=$(find "$HOME" -maxdepth 1 -type d)
 documents_dirs=$(find "$HOME/Documents" -maxdepth 2 -type d)
 engineering_dir=$(find "$HOME/Documents/engineering" -maxdepth 3 -type d)
 config_dirs=$(find -L "$HOME/.config" -maxdepth 1 -type d)
-    
+config_dirs=$(find -L "$HOME/.config" -maxdepth 1 -type d)
+minescript_dir=$(find -L "$HOME/.local/share/PrismLauncher/instances/Skyblock - 1.21.5 Fabric/minecraft/minescript" -maxdepth 0 -type d)
+
 # Combine directory lists
-all_dirs=$(echo -e "$home_dirs\n$documents_dirs\n$config_dirs\n$engineering_dir")
+all_dirs=$(echo -e "$home_dirs\n$documents_dirs\n$config_dirs\n$engineering_dir\n$minescript_dir")
 all_dirs=$(echo "$all_dirs" | sort | uniq)
 all_dirs=$(echo -e "Exit\n$all_dirs")
-    
+
 # Use fzf to select a directory
 selected_dir=$(echo "$all_dirs" | fzf)
 

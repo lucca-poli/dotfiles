@@ -137,7 +137,7 @@ done
 
 swww query
 if [ $? -eq 1 ] ; then
-    swww init
+    swww-daemon
 fi
 
 Wall_Set

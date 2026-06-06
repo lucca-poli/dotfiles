@@ -119,7 +119,7 @@
     fzf
     ripgrep
     tree
-    neovim
+    pkgs-unstable.neovim
     udiskie
     wl-clipboard
     zoxide

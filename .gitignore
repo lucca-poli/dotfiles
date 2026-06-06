@@ -1,3 +1,21 @@
 obsidian/.config/obsidian
 nvim/.config/nvim/undodir
 go/.config/go/telemetry
+
+# Auto-generated files
+**/.zcompdump
+**/lazy-lock.json
+**/qalculate-gtk.cfg
+**/qt5ct.conf
+**/qt6ct.conf
+**/github-copilot/apps.json
+**/github-copilot/versions.json
+
+# Generated wallpaper files
+**/wall.blur
+**/wall.rofi
+**/wall.set
+
+# Cava auto-generated
+**/cava/shaders/
+**/cava/themes/

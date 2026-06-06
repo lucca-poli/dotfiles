@@ -16,7 +16,7 @@
 
 	"modules-left": ["custom/padd","custom/l_end","cpu","memory","custom/r_end","custom/l_end","idle_inhibitor","clock","custom/r_end","","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","hyprland/workspaces","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","backlight","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/night_mode","custom/r_end","custom/l_end","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","backlight","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/updates","custom/odysseus","custom/r_end","custom/l_end","tray","battery","custom/r_end","custom/l_end","custom/wallchange","custom/theme","custom/wbar","custom/cliphist","custom/power","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -67,9 +67,9 @@
             "on-scroll": 1,
             "on-click-right": "mode",
             "format": {
-                "months": "<span color='#ffead3'><b>{}</b></span>",
-                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-                "today": "<span color='#ff6699'><b>{}</b></span>"
+                "months": "<span color='#ffead3'><b>{}</b>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b>",
+                "today": "<span color='#ff6699'><b>{}</b>"
             }
         },
         "actions": {
@@ -110,7 +110,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 ",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes} <span foreground='#ffcc66'> {bandwidthUpBytes}",
         "interval": 2,
     },
 
@@ -173,12 +173,13 @@
         "tooltip": true,
     },
 
-    "custom/night_mode": {
-        "format": "",
-        "on-click": "wlsunset -l -23.5 -L -46.6 &",
-        "on-click-right": "pkill wlsunset",
+    "custom/odysseus": {
+        "format": "{}",
+        "exec": "tmux has-session -t odysseus 2>/dev/null && echo '{\"text\": \"\", \"tooltip\": \"Odysseus: running on 127.0.0.1:7000\", \"class\": \"active\"}' || echo '{\"text\": \"\", \"tooltip\": \"Odysseus: stopped\", \"class\": \"inactive\"}'",
+        "on-click": "/home/lucca/apps/odysseus/toggle.sh",
+        "return-type": "json",
+        "interval": 5,
     },
-
     "tray": {
         "icon-size": 18,
         "rotate": 0,

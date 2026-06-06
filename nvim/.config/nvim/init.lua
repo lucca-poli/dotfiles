@@ -135,7 +135,7 @@ require('lazy').setup({
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
-    branch = '0.1.x',
+    branch = 'master',
     dependencies = {
       'nvim-lua/plenary.nvim',
       { -- If encountering errors, see telescope-fzf-native README for installation instructions
@@ -421,7 +421,8 @@ require('lazy').setup({
       local servers = {
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
+        -- csharp_ls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -430,13 +431,22 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {
           cmd = { 'typescript-language-server', '--stdio' },
+          filetypes = { 'ts', 'js' },
         },
-        --
+
+        pyright = {
+          cmd = { 'pyright-langserver', '--stdio' },
+          filetypes = { 'python' },
+        },
+
+        html = {},
 
         clangd = {
-          cmd = { 'clangd', '-extra-arg-before=-xc++' },
+          -- cmd = { 'clangd' }, -- talvez n seja isso
           -- filetypes = { 'c', 'cpp', 'h', 'objcpp', 'cuda' },
         },
+
+        nil_ls = {},
 
         lua_ls = {
           cmd = { '/etc/profiles/per-user/lucca/bin/lua-language-server' },
@@ -468,6 +478,8 @@ require('lazy').setup({
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = { 'lua_ls' },
+        automatic_enable = { 'lua_ls', 'ts_ls', 'clangd', 'rust_analyzer', 'html', 'pyright', 'nil_ls' },
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
@@ -481,6 +493,89 @@ require('lazy').setup({
       }
     end,
   },
+
+  -- { -- Copilot interface
+  --   'zbirenbaum/copilot.lua',
+  --   cmd = 'Copilot',
+  --   event = 'VeryLazy',
+  --   opts = {
+  --     panel = { enabled = false },
+  --     suggestion = { enabled = false },
+  --   },
+  -- },
+
+  -- { -- AI Completion
+  --   'yetone/avante.nvim',
+  --   event = 'VeryLazy',
+  --   version = false, -- Never set this value to "*"! Never!
+  --   ---@module 'avante'
+  --   ---@type avante.Config
+  --   opts = {
+  --     -- this file can contain specific instructions for your project
+  --     instructions_file = 'avante.md',
+  --     -- for example
+  --     auto_suggestions_provider = nil,
+  --     provider = 'copilot',
+  --     providers = {
+  --       -- claude = {
+  --       --   endpoint = 'https://api.anthropic.com',
+  --       --   model = 'claude-sonnet-4-20250514',
+  --       --   timeout = 30000, -- Timeout in milliseconds
+  --       --   extra_request_body = {
+  --       --     temperature = 0.75,
+  --       --     max_tokens = 20480,
+  --       --   },
+  --       -- },
+  --       -- moonshot = {
+  --       --   endpoint = 'https://api.moonshot.ai/v1',
+  --       --   model = 'kimi-k2-0711-preview',
+  --       --   timeout = 30000, -- Timeout in milliseconds
+  --       --   extra_request_body = {
+  --       --     temperature = 0.75,
+  --       --     max_tokens = 32768,
+  --       --   },
+  --       -- },
+  --     },
+  --   },
+  --   dependencies = {
+  --     'nvim-lua/plenary.nvim',
+  --     'MunifTanjim/nui.nvim',
+  --     --- The below dependencies are optional,
+  --     -- 'nvim-mini/mini.pick', -- for file_selector provider mini.pick
+  --     'nvim-telescope/telescope.nvim', -- for file_selector provider telescope
+  --     'hrsh7th/nvim-cmp', -- autocompletion for avante commands and mentions
+  --     'ibhagwan/fzf-lua', -- for file_selector provider fzf
+  --     -- 'stevearc/dressing.nvim', -- for input provider dressing
+  --     -- 'folke/snacks.nvim', -- for input provider snacks
+  --     'nvim-tree/nvim-web-devicons', -- or echasnovski/mini.icons
+  --     'zbirenbaum/copilot.lua', -- for providers='copilot'
+  --     -- {
+  --     --   -- support for image pasting
+  --     --   'HakonHarnes/img-clip.nvim',
+  --     --   event = 'VeryLazy',
+  --     --   opts = {
+  --     --     -- recommended settings
+  --     --     default = {
+  --     --       embed_image_as_base64 = false,
+  --     --       prompt_for_file_name = false,
+  --     --       drag_and_drop = {
+  --     --         insert_mode = true,
+  --     --       },
+  --     --       -- required for Windows users
+  --     --       use_absolute_path = true,
+  --     --     },
+  --     --   },
+  --     -- },
+  --     {
+  --       -- Make sure to set this up properly if you have lazy=true
+  --       'MeanderingProgrammer/render-markdown.nvim',
+  --       opts = {
+  --         file_types = { 'markdown', 'Avante' },
+  --       },
+  --       ft = { 'markdown', 'Avante' },
+  --     },
+  --   },
+  -- },
 
   { -- Autoformat
     'stevearc/conform.nvim',
@@ -735,10 +830,11 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
+    branch = 'main',
+    main = 'nvim-treesitter.config', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'lua', 'luadoc', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -802,6 +898,18 @@ require('lazy').setup({
       start = '🚀',
       task = '📌',
       lazy = '💤 ',
+    },
+  },
+})
+
+vim.lsp.enable 'roslyn_ls'
+vim.lsp.config('roslyn_ls', {
+  filetypes = { 'razor', 'cs' },
+  settings = {
+    -- better performance
+    ['csharp|background_analysis'] = {
+      dotnet_analyser_diagnostics_scope = 'openFiles',
+      dotnet_compiler_diagnostics_scope = 'openFiles',
     },
   },
 })

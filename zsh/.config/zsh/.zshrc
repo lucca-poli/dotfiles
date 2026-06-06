@@ -44,5 +44,68 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias st=~/.config/tmux/start_tmux.sh
+line_counter() {
+    local dir="${1:-.}"
 
+    while true; do
+        local choice
+
+        choice=$(
+            {
+                echo ".."
+
+                rg --count . "$dir" 2>/dev/null \
+                | sed "s#^$dir/##" \
+                | awk '
+                {
+                    idx = match($0, /:[0-9]+$/)
+
+                    path = substr($0, 1, idx - 1)
+                    lines = substr($0, idx + 1)
+
+                    split(path, parts, "/")
+
+                    key = parts[1]
+
+                    sums[key] += lines
+                }
+
+                END {
+                    for (k in sums)
+                        printf "%10d %s\n", sums[k], k
+                }
+                ' \
+                | sort -nr
+            } \
+            | fzf --prompt="$dir > " \
+                  --height=40% \
+                  --layout=reverse
+        )
+
+        [ -z "$choice" ] && return
+
+        if [ "$choice" = ".." ]; then
+            dir="$(dirname "$dir")"
+            continue
+        fi
+
+        local target
+        target="$(echo "$choice" | awk '{print $2}')"
+
+        target="$dir/$target"
+
+        if [ -d "$target" ]; then
+            dir="$target"
+        else
+            ${EDITOR:-nvim} "$target"
+        fi
+    done
+}
+
+alias st=~/.config/tmux/start_tmux.sh
+alias python="python3.12"
+
+export DOTNET_ROOT=$(dirname $(readlink -f $(which dotnet)))
+export SSL_CERT_DIR=$HOME/.aspnet/dev-certs/trust:/usr/lib/ssl/certs
+export PATH="$PATH:/home/lucca/.dotnet/tools"
+export PATH="/home/lucca/.local/bin:$PATH"

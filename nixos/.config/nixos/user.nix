@@ -19,7 +19,7 @@
     shell = pkgs.zsh;
     packages = [
       # util
-      pkgs.obsidian
+      # pkgs.obsidian
       # pkgs.stremio
       # pkgs.protonvpn-gui
       pkgs.spotify
@@ -34,12 +34,12 @@
       pkgs.zoom-us
       pkgs.sl
       pkgs.mpv-unwrapped # Audio player
-      pkgs.texliveSmall # Latex (.tex) to pdf
+      # pkgs.texliveSmall # Latex (.tex) to pdf
       # pkgs.poppler_utils # Merge pdfs
       pkgs.libreoffice
       pkgs.xorg.xev # Check keyboard keys
-      pkgs.google-chrome # For tests in whatsapp for IC
-      pkgs.ani-cli # Watch animes
+      # pkgs.google-chrome # For tests in whatsapp for IC
+      # pkgs.ani-cli # Watch animes
       pkgs.wlsunset
       pkgs.xorg.xbacklight
 
@@ -47,13 +47,15 @@
       pkgs.rustup
       pkgs.nodejs_22
       pkgs.gnumake
-      pkgs.graphviz
-      pkgs.wireshark
+      # pkgs.graphviz
+      # pkgs.wireshark
       pkgs.dotnet-sdk_10
-      pkgs.sqlitebrowser
+      pkgs.dbeaver-bin
       # Package managers
       pkgs.uv
       pkgs.luajitPackages.luarocks
+      pkgs.bun
+      pkgs.opencode
 
       # yazi
       pkgs.yazi
@@ -65,13 +67,14 @@
       pkgs.typescript-language-server
       pkgs.stylua
       pkgs.nodePackages.prettier
+      pkgs-unstable.tree-sitter
 
       # Gaming
-      pkgs.prismlauncher
-      pkgs.hmcl
-      pkgs.temurin-jre-bin-8
-      pkgs.temurin-jre-bin-21
-      pkgs.zulu
+      # pkgs.prismlauncher
+      # pkgs.hmcl
+      # pkgs.temurin-jre-bin-8
+      # pkgs.temurin-jre-bin-21
+      # pkgs.zulu
 
       # Hyprland
       pkgs.jq # A lightweight and flexible command-line JSON processor
